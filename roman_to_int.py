@@ -79,5 +79,5 @@ class Solution:
 
         
 a = Solution()
-#a.romanToInt("MCMXCIV")
+a.romanToInt("MCMXCIV")
 a.romanToInt("XIV")
