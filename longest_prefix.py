@@ -33,8 +33,8 @@ class Solution:
                 else:
                     lim = i-1
             minlen = minlen[:lim]
-            return list(minlen)
+            return minlen
                 
 a = Solution()
-a.longestCommonPrefix(["dog","racecar","car"])
-a.longestCommonPrefix(["flower","flow","flight"])
+print(a.longestCommonPrefix(["dog","racecar","car"]))
+print(a.longestCommonPrefix(["flower","flow","flight"]))
