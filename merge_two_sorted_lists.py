@@ -33,14 +33,18 @@ Output: [0]
 
 
 # Definition for singly-linked list.
-# class ListNode:
-#     def __init__(self, val=0, next=None):
-#         self.val = val
-#         self.next = next
+from typing import Optional
+
+
+class ListNode:
+    def __init__(self, val=0, next=None):
+        self.val = val
+        self.next = next
+
 class Solution:
-    def mergeTwoLists(self, list1, list2):
-        sorted_list=sorted(list1+list2)
-        return sorted_list
+    def mergeTwoLists(self, list1: Optional[ListNode], list2: Optional[ListNode]) -> Optional[ListNode]:
+        print(list1.next)
+
 
 a = Solution()
 print(a.mergeTwoLists([1,2,4], [1,3,4]))
