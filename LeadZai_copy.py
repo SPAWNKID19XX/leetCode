@@ -52,7 +52,6 @@ class Paginator():
             self.around = int(around)
     
     def add_points(self, pages=[]):
-    #insert '...' between none sequencial numbers 
         for index in range(len(pages)-1):
             try:
                 if int(pages[index+1]) - int(pages[index]) == 1:
@@ -62,16 +61,14 @@ class Paginator():
             except ValueError:
                 pass
 
-
     def add_pages(self, start_page, finish_page, pages =  []):
-        #add page from start until finish variables(sequencial)
         for page in range(start_page, finish_page+1):
             if not str(page) in pages:
                 pages.append(str(page))
         
     def print_paginator(self):
-        #main Logic for printing paginato
         pages = []
+        
         if self.boundaries > 0:
             if self.boundaries * 2 >= self.total_pages:
                 self.add_pages(1, self.total_pages, pages)
@@ -114,8 +111,6 @@ pgntor = Paginator()
 print(pgntor.print_paginator())
 
 import unittest
-import coverage
-coverage.process_startup()
 
 class TestPaginator(unittest.TestCase):
     # SetUp
