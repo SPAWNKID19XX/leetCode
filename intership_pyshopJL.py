@@ -64,11 +64,9 @@ def get_score(game_stamps, offset):
     if curent_stamp[0]['offset'] == offset:
         return f"At offset {offset}, Home Score: {curent_stamp[0]['score']['home']}, Away Score: {curent_stamp[0]['score']['away']}"
     else:
-        return 'offset does not exist'
+        return 'Offset does not exist'
 
 get_score = get_score(game_stamps, 1000)
 print(get_score)
-#home_score, away_score = get_score(game_stamps, offset_to_check)
-#print(f"At offset {offset_to_check}, Home Score: {home_score}, Away Score: {away_score}")
-  
+
     
