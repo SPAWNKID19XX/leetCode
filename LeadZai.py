@@ -114,6 +114,7 @@ pgntor = Paginator()
 print(pgntor.print_paginator())
 
 import unittest
+
 import coverage
 coverage.process_startup()
 
@@ -123,22 +124,34 @@ class TestPaginator(unittest.TestCase):
         self.paginator = Paginator(4,5,1,0)
 
     # Input Existense
-    def test_four_values_exist(self):
+    def test_current_page_exist(self):
         self.assertIsNotNone(self.paginator.current_page)
+    
+    def test_total_pages_exist(self):
         self.assertIsNotNone(self.paginator.total_pages)
+
+    def test_boundaries_exist(self):
         self.assertIsNotNone(self.paginator.boundaries)
+
+    def test_around_exist(self):
         self.assertIsNotNone(self.paginator.around)
  
     # Input Validator
-    def test_args_equal_O(self):
+    def test_current_page_equal_O(self):
         self.assertNotEqual(self.paginator.current_page, 0)
+    def test_total_pages_equal_0(self):
         self.assertNotEqual(self.paginator.total_pages, 0)
 
-    def test_not_int_char(self):
+    def test_current_page_not_int_char(self):
         self.assertIsInstance(self.paginator.current_page, int)
-        self.assertIsInstance(self.paginator.around, int)
+
+    def test_total_pages_not_int_char(self):
         self.assertIsInstance(self.paginator.total_pages, int)
+
+    def test_boundaries_not_int_char(self):
         self.assertIsInstance(self.paginator.boundaries, int)
+    def test_around_not_int_char(self):
+        self.assertIsInstance(self.paginator.around, int)
 
     def test_total_greater_curent(self):
         self.assertGreaterEqual(self.paginator.total_pages, self.paginator.current_page)
