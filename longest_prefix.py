@@ -22,7 +22,7 @@ Explanation: There is no common prefix among the input strings.
 '''
 
 class Solution:
-    def longestCommonPrefix(self, strs: list[str]) -> str:
+    def longest_common_prefix(self, strs: list[str]) -> str:
         minlen = min(strs, key=len)
         strs.remove(minlen)
         lim = 0
@@ -36,5 +36,5 @@ class Solution:
             return minlen
                 
 a = Solution()
-print(a.longestCommonPrefix(["dog","racecar","car"]))
-print(a.longestCommonPrefix(["flower","flow","flight"]))
+print(a.longest_common_prefix(["dog","racecar","car"]))
+print(a.longest_common_prefix(["flower","flow","flight"]))

@@ -69,7 +69,7 @@ The difference between neighbors is less than 5, so no peaks.
 
 
 class SolutionPeak():
-    def check_peaks(self, data_list: list) -> int:
+    def check_peaks(self, data_list: list) -> tuple:
         top_peak = 0
         bottom_peak = 0
         for i in range(1, len(data_list) - 1):
@@ -92,6 +92,7 @@ values3 = [10, 20, 10, 20, 10, 20, 10, 20, 10, 20, 10]
 values4 = [5, 10, 15, 20, 25, 30, 35, 40, 45, 50, 55]
 
 a = SolutionPeak()
+print(type(a.check_peaks(values1)))
 print(f'A data list {a.check_peaks(values1)[0]} has {a.check_peaks(values1)[1]}.\n\tTop Peak: {a.check_peaks(values1)[2]}\n\tBottom Peak: {a.check_peaks(values1)[3]}')
 print(f'A data list {a.check_peaks(values2)[0]} has {a.check_peaks(values2)[1]}.\n\tTop Peak: {a.check_peaks(values2)[2]}\n\tBottom Peak: {a.check_peaks(values2)[3]}')
 print(f'A data list {a.check_peaks(values3)[0]} has {a.check_peaks(values3)[1]}.\n\tTop Peak: {a.check_peaks(values3)[2]}\n\tBottom Peak: {a.check_peaks(values3)[3]}')
