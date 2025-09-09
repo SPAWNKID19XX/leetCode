@@ -26,7 +26,7 @@ class Solution():
     def gen_rend_poins(self):
         r_list = []
 
-        for i in range(10000000):
+        for i in range(100000000):
             x = random.randint(0,1000) / 1000
             y = random.randint(0,1000) / 1000
 
