@@ -1,5 +1,5 @@
 class Calculator():
-    def init(self, a, b):
+    def __init__(self, a=None, b=None):
         self.a = a
         self.b = b
 
@@ -12,7 +12,7 @@ class Calculator():
     def div(self, a, b):
         if b != 0:
             return a / b
-        raise ValueError( "Div by zero error")
+        raise ValueError("Div by zero error")
     #
     def minus(self, a, b):
         return a - b
