@@ -32,7 +32,7 @@ Thus, the result should be [1,0].
 '''
 
 class Solution:
-    def plusOne(self, digits):]
+    def plusOne(self, digits):
         
 
 
